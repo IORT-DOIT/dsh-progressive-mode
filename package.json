@@ -1,0 +1,28 @@
+{
+  "name": "dsh-progressive-mode",
+  "version": "1.2.1",
+  "private": true,
+  "type": "module",
+  "description": "A minimal-complexity agent preset for DeepSeek Harness: decide implementation depth before orchestrating.",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "agent-preset",
+    "agent-skills",
+    "prompt-engineering"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "verify": "node tools/verify.mjs",
+    "verify:live": "node tools/verify.mjs --all",
+    "install:preset": "node tools/install.mjs",
+    "uninstall:preset": "node tools/install.mjs --uninstall",
+    "build:patch": "node tools/build-patch.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

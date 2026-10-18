@@ -1,0 +1,6 @@
+* text=auto eol=lf
+
+# Frozen artifacts are byte-compared by tools/verify.mjs; checkout must keep LF.
+injected-prompt.md text eol=lf
+preset/*.yml text eol=lf
+skills/**/SKILL.md text eol=lf
