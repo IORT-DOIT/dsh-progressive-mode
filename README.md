@@ -4,6 +4,8 @@
 > depth from the task's actual impact *before* adding plans, agents, or verification.
 > One preset declaration + four on-demand skills. Frozen baseline v1.2.1.
 
+[![verify](https://github.com/IORT-DOIT/dsh-progressive-mode/actions/workflows/verify.yml/badge.svg)](https://github.com/IORT-DOIT/dsh-progressive-mode/actions/workflows/verify.yml)
+
 一个 DSH **agent preset** 加 4 个**按需加载的 skill**：先用「影响范围」判断实现深度（Level 0—4），再决定是否需要计划、编排与验证。核心主张只有一句——**实现深度与 Agent 数量完全独立**；反对“任务看起来大就先上多 Agent”。
 
 ---

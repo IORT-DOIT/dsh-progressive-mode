@@ -1,0 +1,28 @@
+name: verify
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Frozen artifacts (6 SHA256)
+        run: node tools/verify.mjs
+
+      - name: Preset assembly (16 checks, frozen snapshot)
+        run: node tools/verify.mjs --patch preset/cordis.patch.yml
+
+      - name: Installer dry-run (skills + preset fragment)
+        run: node tools/install.mjs --dsh-home "${{ runner.temp }}/dshhome" --dry-run
