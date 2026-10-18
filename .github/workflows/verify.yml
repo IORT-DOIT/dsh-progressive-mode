@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Install verifier dependency (js-yaml)
+        run: npm install --no-audit --no-fund
+
       - name: Frozen artifacts (6 SHA256)
         run: node tools/verify.mjs
 
